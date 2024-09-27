@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "370915085564",
+    "project_id": "ggfix-6e0b9",
+    "storage_bucket": "ggfix-6e0b9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:370915085564:android:fa05748c74d10cfebe1b79",
+        "android_client_info": {
+          "package_name": "com.pixelstrap.fuzzy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZXBUDWNz3v3Q9AZzjud8kf9LYJ3zx2mU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
