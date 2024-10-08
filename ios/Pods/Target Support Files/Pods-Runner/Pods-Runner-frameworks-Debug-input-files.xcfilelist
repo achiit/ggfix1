@@ -11,6 +11,7 @@ ${BUILT_PRODUCTS_DIR}/RecaptchaInterop/RecaptchaInterop.framework
 ${BUILT_PRODUCTS_DIR}/Toast/Toast.framework
 ${BUILT_PRODUCTS_DIR}/flutter_localization/flutter_localization.framework
 ${BUILT_PRODUCTS_DIR}/fluttertoast/fluttertoast.framework
+${BUILT_PRODUCTS_DIR}/geolocator_apple/geolocator_apple.framework
 ${BUILT_PRODUCTS_DIR}/path_provider_foundation/path_provider_foundation.framework
 ${BUILT_PRODUCTS_DIR}/shared_preferences_foundation/shared_preferences_foundation.framework
 ${BUILT_PRODUCTS_DIR}/smart_auth/smart_auth.framework

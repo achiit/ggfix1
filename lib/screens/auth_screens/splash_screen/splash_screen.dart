@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen>
           onInit: () => Future.delayed(const Duration(milliseconds: 10),
               () => splash.onAnimate(this, context)),
           child: Scaffold(
-              backgroundColor: appColor(context).appTheme.primaryColor,
+              backgroundColor: appColor(context).appTheme.backGroundColorMain,
               body: SafeArea(
                   child: Center(
                       child: splash.controller != null &&
@@ -30,7 +30,10 @@ class _SplashScreenState extends State<SplashScreen>
                                 return SizedBox(
                                     height: splash.sizeAnimation!.value,
                                     width: splash.sizeAnimation!.value,
-                                    child: Image.asset(imageAssets.splashBg));
+                                    child: Image.asset(
+                                      imageAssets.splashBg,
+                                      height: 50,
+                                    ));
                               })
                           : const CircularProgressIndicator() // Placeholder or loading indicator
                       ))));

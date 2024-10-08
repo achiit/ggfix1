@@ -19,6 +19,7 @@ class TextFieldCommon extends StatelessWidget {
   final double? width;
   final double? height, textFieldHeight;
   final Color? leftBorderColor;
+  final bool? enabled;
 
   const TextFieldCommon({
     Key? key,
@@ -28,6 +29,7 @@ class TextFieldCommon extends StatelessWidget {
     this.suffixIcon,
     this.prefixIcon,
     this.border,
+    this.enabled,
     this.obscureText = false,
     this.fillColor,
     this.vertical,
@@ -57,6 +59,7 @@ class TextFieldCommon extends StatelessWidget {
       ),
       Expanded(
           child: TextFormField(
+              enabled: enabled,
               maxLines: maxLines ?? 1,
               style: appCss.dmPoppinsMedium14.textColor(
                 appColor(context).appTheme.txtTransparentColor,

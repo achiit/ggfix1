@@ -11,7 +11,7 @@ class CartListData extends StatelessWidget {
         children: [
           const VSpace(Sizes.s25),
           //divider on checkout page
-           CommonWidget().commonDivider(context),
+          CommonWidget().commonDivider(context),
           const VSpace(Sizes.s20),
           //cart list on check out page
           ...cart.cartList
@@ -28,7 +28,7 @@ class CartListData extends StatelessWidget {
           const VSpace(Sizes.s20),
           //choose shipping text layout
           CheckOutWidget().mainAllText(context,
-              mainText: language(context, appFonts.chooseShipping)),
+              mainText: language(context, appFonts.businessdetails)),
           const VSpace(Sizes.s15),
         ],
       );

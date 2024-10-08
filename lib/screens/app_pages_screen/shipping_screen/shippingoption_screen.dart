@@ -30,7 +30,7 @@ class ShippingOptionScreen extends StatelessWidget {
                       Align(
                               alignment: Alignment.center,
                               child: Text(
-                                  language(context, appFonts.chooseShipping),
+                                  language(context, appFonts.businessdetails),
                                   style: appCss.dmPoppinsSemiBold16
                                       .textColor(isThemeColorReturn(context))))
                           .paddingOnly(top: Insets.i10)

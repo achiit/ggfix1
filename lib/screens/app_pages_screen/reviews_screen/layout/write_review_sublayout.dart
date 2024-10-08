@@ -24,7 +24,7 @@ class WriteReviewSubLayout extends StatelessWidget {
             .paddingSymmetric(vertical: Insets.i15),
         //text widget
         ShippingWidget().textCommon(
-            language(context, appFonts.addPhotoVideo), true, context),
+            language(context, "hello"), true, context),
         const VSpace(Sizes.s6),
         //dotted border widget
         ReviewWidget().writeReviewBorder(

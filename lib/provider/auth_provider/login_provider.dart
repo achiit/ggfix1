@@ -1,4 +1,5 @@
 import 'package:fuzzy/config.dart';
+import 'package:fuzzy/screens/auth_screens/businessdetails_screen/details_screen.dart';
 import '../../plugin_list.dart';
 
 class LoginProvider with ChangeNotifier {
@@ -29,13 +30,15 @@ class LoginProvider with ChangeNotifier {
     if (isBack) {
       route.pop(context);
     } else {
-      Navigator.pushAndRemoveUntil(
-          context,
-          MaterialPageRoute(
-              builder: (BuildContext context) => MultiProvider(providers: [
-                    ChangeNotifierProvider(create: (_) => DashboardProvider()),
-                  ], child: const Dashboard())),
-          ModalRoute.withName(routeName.dashboard));
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => BusinessDetailsPage()));
+      // Navigator.pushAndRemoveUntil(
+      //     context,
+      //     MaterialPageRoute(
+      //         builder: (BuildContext context) => MultiProvider(providers: [
+      //               ChangeNotifierProvider(create: (_) => DashboardProvider()),
+      //             ], child: const Dashboard())),
+      //     ModalRoute.withName(routeName.dashboard));
     }
 
     notifyListeners();

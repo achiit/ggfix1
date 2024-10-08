@@ -6,20 +6,20 @@ class AppArray {
     {
       "id": 1,
       "image": imageAssets.onBoardingChair,
-      "title": appFonts.officeFurniture,
-      "subtext": appFonts.officeFurnitureDetails,
+      "title": appFonts.intro1title,
+      "subtext": appFonts.intro1Details,
     },
     {
       "id": 2,
       "image": imageAssets.onBoardingSofa,
-      "title": appFonts.relaxingFurniture,
-      "subtext": appFonts.officeFurnitureDetails,
+      "title": appFonts.intro2title,
+      "subtext": appFonts.intro1Details,
     },
     {
       "id": 3,
       "image": imageAssets.onBoardingTable,
-      "title": appFonts.homeDecor,
-      "subtext": appFonts.officeFurnitureDetails,
+      "title": appFonts.intro3title,
+      "subtext": appFonts.intro1Details,
     },
   ];
 //home furniture list
@@ -333,63 +333,63 @@ class AppArray {
       "icon": svgAssets.iconBox,
       "title": appFonts.order,
       "subtitle": appFonts.orderSubtitle,
-      "route":routeName.orderHistory
+      "route": routeName.orderHistory
     },
     {
       "id": 2,
       "icon": svgAssets.iconWishlistProfile,
       "title": appFonts.wishlist,
       "subtitle": appFonts.wishlistSubtitle,
-      "route":routeName.wishlist
+      "route": routeName.wishlist
     },
     {
       "id": 3,
       "icon": svgAssets.iconPayment,
       "title": appFonts.payment,
       "subtitle": appFonts.paymentSubtitle,
-      "route":routeName.payment
+      "route": routeName.payment
     },
     {
       "id": 4,
       "icon": svgAssets.iconLocation,
       "title": appFonts.saveAddress,
       "subtitle": appFonts.saveAddressSubtitle,
-      "route":routeName.shippingDetails
+      "route": routeName.shippingDetails
     },
     {
       "id": 5,
       "icon": svgAssets.iconLanguageTranslate,
       "title": appFonts.language,
       "subtitle": appFonts.languageSubTitle,
-      "route":routeName.language
+      "route": routeName.language
     },
     {
       "id": 6,
       "icon": svgAssets.iconCurrency,
       "title": appFonts.currency,
       "subtitle": appFonts.currencySubtitle,
-      "route":routeName.currencyScreen
+      "route": routeName.currencyScreen
     },
     {
       "id": 7,
       "icon": svgAssets.iconSettings,
       "title": appFonts.setting,
       "subtitle": appFonts.settingSubtitle,
-      "route":routeName.setting
+      "route": routeName.setting
     },
     {
       "id": 8,
       "icon": svgAssets.iconTermCondition,
       "title": appFonts.termsAndCondition,
       "subtitle": appFonts.termAndConditionSubTitle,
-      "route":routeName.termsCondition
+      "route": routeName.termsCondition
     },
     {
       "id": 9,
       "icon": svgAssets.iconHelp,
       "title": appFonts.help,
       "subtitle": appFonts.helpSubtitle,
-      "route":routeName.help
+      "route": routeName.help
     },
   ];
   //chair list
@@ -1060,9 +1060,9 @@ class AppArray {
   List drawerList = [
     {"id": 1, "title": appFonts.rtl},
     {"id": 2, "title": appFonts.dark},
-    {"id": 3, "title": appFonts.pageList,"route":routeName.pageList},
-    {"id": 4, "title": appFonts.setting,"route":routeName.setting},
-    {"id": 5, "title": appFonts.logout,"route":routeName.login},
+    {"id": 3, "title": appFonts.pageList, "route": routeName.pageList},
+    {"id": 4, "title": appFonts.setting, "route": routeName.setting},
+    {"id": 5, "title": appFonts.logout, "route": routeName.login},
   ];
 //help list
   List helpList = [

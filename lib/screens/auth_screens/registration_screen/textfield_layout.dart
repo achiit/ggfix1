@@ -29,12 +29,16 @@ class TextFieldLayoutRegistration extends StatelessWidget {
             onChanged: (value) => registration.validatePhoneNumber(value),
             validator: (value) => Validation().phoneValidation(context, value),
           ),
-          const VSpace(Sizes.s15),
           if (registration.isPhoneValid && !registration.isOtpSent)
-            ElevatedButton(
+            TextButton(
               onPressed: () =>
                   registration.sendOTP(registration.phoneController.text),
-              child: Text(language(context, "appFonts.sendOTP")),
+              child: Text(
+                language(context, appFonts.sendOtp),
+                style: TextStyle(
+                    color: appColor(context).appTheme.whiteColor,
+                    decoration: TextDecoration.underline),
+              ),
             ),
           AnimatedContainer(
             duration: const Duration(milliseconds: 500),
@@ -45,7 +49,7 @@ class TextFieldLayoutRegistration extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   CommonTextLayout(
-                      text: language(context, " appFonts.otpVerification"),
+                      text: language(context, appFonts.enterOtp),
                       isStyle: true),
                   const VSpace(Sizes.s6),
                   Pinput(
@@ -85,6 +89,37 @@ class TextFieldLayoutRegistration extends StatelessWidget {
               ),
             ),
           ),
+          AnimatedContainer(
+            duration: const Duration(milliseconds: 500),
+            curve: Curves.easeInOut,
+            height: registration.isOtpSent &&
+                    registration.otpController.text.length == 6
+                ? 30
+                : 0,
+            child: SingleChildScrollView(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    registration.isOtpCorrect
+                        ? Icons.check_circle
+                        : Icons.cancel,
+                    color:
+                        registration.isOtpCorrect ? Colors.green : Colors.red,
+                  ),
+                  const SizedBox(width: 8),
+                  Text(
+                    registration.isOtpCorrect ? "OTP Verified" : "Wrong OTP",
+                    style: TextStyle(
+                      color:
+                          registration.isOtpCorrect ? Colors.green : Colors.red,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
           const VSpace(Sizes.s15),
           AnimatedContainer(
             duration: const Duration(milliseconds: 500),
@@ -117,11 +152,11 @@ class TextFieldLayoutRegistration extends StatelessWidget {
             ),
           ),
           const VSpace(Sizes.s15),
-          if (registration.isOtpCorrect)
-            ElevatedButton(
-              onPressed: () => registration.onRegistration(context),
-              child: Text(language(context, appFonts.signUp)),
-            ),
+          // if (registration.isOtpCorrect)
+          //   ElevatedButton(
+          //     onPressed: () => registration.onRegistration(context),
+          //     child: Text(language(context, appFonts.signUp)),
+          //   ),
         ])
       ]);
     });

@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:fuzzy/config.dart';
 import 'package:fuzzy/plugin_list.dart';
 import 'package:fuzzy/screens/sp.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
@@ -10,9 +11,17 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
 );
+  await checkLocationPermission();
+
   runApp(const MyApp());
 }
 
+Future<void> checkLocationPermission() async {
+  final status = await Permission.location.status;
+  if (!status.isGranted) {
+    await Permission.location.request();
+  }
+}
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
