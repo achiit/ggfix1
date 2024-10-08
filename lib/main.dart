@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
 import 'package:fuzzy/config.dart';
 import 'package:fuzzy/plugin_list.dart';
+import 'package:fuzzy/provider/auth_provider/businessdetails_provider.dart';
 import 'package:fuzzy/screens/sp.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'firebase_options.dart';
@@ -60,6 +61,8 @@ class MyApp extends StatelessWidget {
                   ChangeNotifierProvider(create: (_) => ProfileProvider()),
                   ChangeNotifierProvider(create: (_) => PageListProvider()),
                   ChangeNotifierProvider(create: (_) => DetailsProvider()),
+                  ChangeNotifierProvider(create: (_) => BusinessDetailsProvider()),
+
                   ChangeNotifierProvider(
                       create: (_) => CurrencyProvider(snapData.data!)),
                   ChangeNotifierProvider(create: (_) => HelpProvider()),

@@ -1,0 +1,31 @@
+{
+  "name": "image_compression_flutter",
+  "version": "1.0.0",
+  "summary": "Flutter image compression and resize for Mobile, Desktop and Web. Support format JPG, PNG, WEBP.",
+  "description": "Flutter image compression and resize for Mobile, Desktop and Web. Support format JPG, PNG, WEBP.",
+  "homepage": "https://github.com/eyro-labs/image_compression_flutter",
+  "license": {
+    "file": "../LICENSE"
+  },
+  "authors": {
+    "Eyro Labs": "me@eyro.co.id"
+  },
+  "source": {
+    "path": "."
+  },
+  "source_files": "Classes/**/*",
+  "dependencies": {
+    "Flutter": [
+
+    ]
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "pod_target_xcconfig": {
+    "DEFINES_MODULE": "YES",
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "i386"
+  },
+  "swift_versions": "5.0",
+  "swift_version": "5.0"
+}
